@@ -13,7 +13,7 @@ const InfoBar = ({ room, name }) => (
       <p className='text-2xl text-white'>{room}</p>
     </div>
     <div className="flex justify-end items-center" >
-      <a href="/" ><img src={closeIcon} alt="close icon"/></a>
+      <a href="/"><img src={closeIcon} alt="close icon"/></a>
     </div>
   </div>
 );

@@ -52,7 +52,7 @@ const Chat = ({ location }) => {
   };
 
   return (
-    <div className="h-screen flex justify-center items-center bg-gradient-to-r from-green-400 to-blue-500">
+    <div className="h-screen flex justify-center items-center bg-gradient-to-r from-green-300 to-blue-300">
       <div className="w-9/12 lg:px-2">
         <InfoBar room={room} name={name}/>
         <Messages messages={messages} name={name} />
@@ -62,7 +62,10 @@ const Chat = ({ location }) => {
           sendMessage={sendMessage}
         />
       </div>
-      <div className='h-full flex justify-center items-center lg:border-l-2 border-indigo-500'>
+      <div className='hidden lg:block w-8 h-screen bg-gradient-to-r from-indigo-500'>
+
+      </div>
+      <div className='h-full flex justify-center items-center'>
         <TextContainer users={users} />
       </div>
     </div>
