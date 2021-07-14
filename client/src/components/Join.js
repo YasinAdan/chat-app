@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Join.css";
 
 const Join = () => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
 
   return (
-    <div className="joinOuterContainer">
-      <div className="joinInnerContainer">
-        <h1 className="heading">Join</h1>
+    <div className="h-screen bg-gray-900 border-2 flex flex-col justify-center items-center">
+      <div>
+        <h1 className="text-5xl text-black text-center mb-4 border-b-4 pb-2 text-gray-100">Join</h1>
         <div>
           <input
             placeholder="Name"
-            className="joinInput"
+            className="bg-gray-200 p-2 rounded"
             type="text"
             onChange={(event) => setName(event.target.value)}
           />
@@ -21,7 +20,7 @@ const Join = () => {
         <div>
           <input
             placeholder="Room"
-            className="joinInput mt-20"
+            className="bg-gray-200 p-2 rounded mt-5"
             type="text"
             onChange={(event) => setRoom(event.target.value)}
           />
@@ -29,8 +28,9 @@ const Join = () => {
         <Link
           onClick={(e) => (!name || !room ? e.preventDefault() : null)}
           to={`/chat?name=${name}&room=${room}`}
+          className='flex justify-center'
         >
-          <button className={"button mt-20"} type="submit">
+          <button className='bg-gray-200 hover:bg-gray-600 hover:text-gray-100 mt-5 p-2 px-6 rounded' type="submit">
             Sign In
           </button>
         </Link>

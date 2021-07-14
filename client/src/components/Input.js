@@ -1,18 +1,17 @@
 import React from 'react';
-import "./Input.css"
 
 const Input = ({message, setMessage, sendMessage}) => {
     return (
-        <form className='form'>
+        <form className='rounded-b-lg'>
             <input
-                className='input'
+                className='w-10/12 p-4 outline-none'
                 type='text'
                 placeholder='Type a message...'
                 value={message}
                 onChange={e => setMessage(e.target.value)}
                 onKeyPress={e => e.key === 'Enter' ? sendMessage(e) : null} 
             />
-            <button className='sendButton' onClick={e => sendMessage(e)}>Send</button>
+            <button className='w-2/12 bg-blue-500 p-4 text-white' onClick={e => sendMessage(e)}>Send</button>
         </form>
     )
 }
